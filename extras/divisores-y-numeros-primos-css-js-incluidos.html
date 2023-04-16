@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+    <head>
+        <!-- CABECERA "DIVISORES Y NÚMEROS PRIMOS" -->
+        <meta charset="UTF-8" />
+        <meta name="keywords" content="Divisores, Números Primos, JavaScript, HTML, CSS" />
+        <meta name="description" content="Aplicación WEB para encontrar divisores de un 
+            número o saber si es un número primo" />  
+        <meta name="author" content="Ricardo García - R.M.G." />  
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Divisores y Números Primos</title>
+        <link 
+            href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" 
+            rel="stylesheet" 
+        /> 
+
+        <style>
+            /* ESTILOS "DIVISORES Y NÚMEROS PRIMOS" */
+            * {
+                box-sizing: border-box;
+                margin: 0; 
+                padding: 0;
+                font-family: Tahoma;
+                font-size: 1.8rem;
+                scroll-behavior: smooth;
+            }
+
+            html {     
+                position: relative;  
+                font-size: 62.5%;    
+                background: white;
+            }
+
+            body {    
+                max-width: 500px;
+                margin: 0 auto; 
+                padding: 1.5rem;
+                background: rgba(0, 163, 0, 0.1);     
+                box-shadow: 0 0 1rem 1rem rgba(0, 0, 0, 0.2);  
+            }
+
+            h1 {
+                padding: 0 1rem 1rem;
+                font-family: 'Titan One';
+                font-size: 2.8rem;
+                font-weight: normal;
+                text-align: center;
+            }
+
+            p {
+                margin: 2rem 0;
+            }
+
+            .especial {
+                padding-left: 1rem;
+                border-left: 0.8rem solid rgb(0, 163, 0);
+            }
+
+            .centrado {
+                margin-bottom: 0.7rem;
+                text-align: center;
+            }
+
+            .derecha {
+                font-weight: bold;
+                text-align: right;
+            }
+
+            hr {
+                height: 0.2rem;
+                margin: 2rem 0 1rem;
+                background: rgb(0, 163, 0);        
+                border: 0.1rem solid rgb(0, 163, 0);
+            }
+
+            input[type=number] {
+                outline: none;
+                display: block;
+                width: 100%;
+                margin: 0 auto 2.5rem;
+                padding: 1rem;
+                font-family: serif;
+                font-size: 2rem;
+                font-weight: bold;
+                text-align: center;
+                border: 0.1rem dotted rgb(0, 163, 0);
+                border-radius: 0.5rem;
+            }
+
+            input[type=number]:focus {
+                border: 0.1rem solid rgb(0, 163, 0);
+            }
+
+            .contenedor {
+                width: 100%;
+                min-height: 4.5rem;
+                margin: 0 auto 2.5rem;
+                padding: 1rem;
+                font-family: 'serif';
+                font-size: 2rem;
+                font-weight: bold;
+                text-align: center;
+                background: white;
+                border: 0.1rem solid rgb(0, 163, 0);
+                border-radius: 0.5rem;
+            }
+
+            button {
+                display: block;
+                width: 100%;
+                margin: 0 auto 1.5rem;
+                padding: 1rem;
+                font-size: 2rem;
+                font-weight: bold;
+                color: white;
+                background: rgb(0, 163, 0);
+                border: none;
+                border-radius: 0.5rem;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background: rgb(0, 100, 0);
+            }
+
+            button:active {
+                background: rgb(0, 163, 0);
+            }
+
+            .resetear-campos {
+                background: rgb(255, 0, 0);
+            }
+
+            .resetear-campos:hover {
+                background: rgb(200, 0, 0);
+            }
+
+            .resetear-campos:active {
+                background: rgb(255, 0, 0);
+            }
+
+            #subir {
+                position: fixed;
+                bottom: 1rem;
+                right: 1rem;
+                height: 5rem;
+                width: 5rem;
+                font-size: 5rem;
+                font-weight: bold;
+                text-align: center;
+                text-decoration: none;
+                color: rgba(50, 50, 50, 0.55);
+                background: rgba(150, 150, 150, 0.35);
+                border-radius: 0.5rem;
+                cursor: pointer;
+                z-index: 5;
+            }
+
+            #subir:hover {
+                color: white;
+                background: hsla(120, 95%, 25%, 1.00);
+            }
+
+            #subir:active {
+                color: rgba(50, 50, 50, 0.55);
+                background: rgba(150, 150, 150, 0.35);
+            }
+        </style>            
+    </head>
+    <body>
+        <!-- CUERPO "DIVISORES Y NÚMEROS PRIMOS" -->
+        <h1>Divisores y Números Primos</h1>
+
+        <p>¿Sabes que es un divisor?</p>
+
+        <p class="especial">En Matemáticas, un número es <strong>divisor</strong> de 
+            otro cuando lo divide exactamente; por ejemplo: <em><strong>5 es divisor 
+            de 50</strong></em>, porqué <em><strong>50 ÷ 5 = 10</strong></em>. A los 
+            divisores también se les llama <strong>factores.</strong></p>
+
+        <p>¿Conoces cuáles son los números primos?</p>
+
+        <p class="especial">En Matemáticas, un <strong>número primo</strong> es un 
+            número natural mayor que <strong>1</strong> el cual tiene únicamente dos 
+            divisores positivos distintos: él <em><strong>mismo número</strong></em> 
+            y el <em><strong>1.</strong></em></p>
+
+        <hr/>
+        <p>Ahora que ya sabes que son los divisores y cuáles son los números primos. 
+            Escribe un número y te mostrare sus divisores, tambien te dire si es un 
+            número primo.</p>
+
+        <input type="number" min="1" max="10000000" placeholder="Escribe un número"/>
+
+        <p class="centrado">Haz clic en el siguiente botón para ver sus divisores.</p>
+
+        <button id="buscar-divisores">Mostrar divisores</button>
+
+        <p class="centrado">Estos son los divisores de<span id="mis-divisores"></span>:</p>
+
+        <p id="mostrar-divisores" class="contenedor"></p>
+
+        <p class="centrado">Solo para que lo tengas presente, te 
+            comento que<span id="soy-primo"></span>:</p>
+
+        <p id="numero-primo" class="contenedor"></p>
+        
+        <button class="resetear-campos">Resetear Campos</button>
+        
+        <hr/>
+        <p class="derecha">Espero verte pronto ¡hasta luego!</p>
+ 
+        <script>
+            /* SCRIPT "DIVISORES Y NÚMEROS PRIMOS" */
+            const numeroQueSeRevisa = document.querySelector("input[type='number']");
+            const mostrarDivisores = document.querySelector("#mostrar-divisores");
+            const numeroPrimo = document.querySelector("#numero-primo");
+            const misDivisores = document.querySelector("#mis-divisores");
+            const soyPrimo = document.querySelector("#soy-primo");
+
+            const buscarDivisores = document.querySelector("#buscar-divisores");
+            const resetearCampos = document.querySelector(".resetear-campos");
+
+            const divisores = () => {    
+                let divisor = [];
+                if(numeroQueSeRevisa.value === "") {
+                    misDivisores.textContent = "";
+                    mostrarDivisores.textContent = "";
+                    return "";
+                }
+                else if(Number(numeroQueSeRevisa.value) !== parseInt(numeroQueSeRevisa.value) 
+                    || Number(numeroQueSeRevisa.value) < 2) {
+                    misDivisores.textContent = "";
+                    mostrarDivisores.style.color = "red";
+                    mostrarDivisores.textContent = "Escribe un número natural mayor que 1";
+                }
+                else if (Number(numeroQueSeRevisa.value) === parseInt(numeroQueSeRevisa.value)) {            
+                    for (let i = 1; i <= numeroQueSeRevisa.value; i++) {            
+                        if (numeroQueSeRevisa.value % i === 0) {
+                            divisor.push(i);                
+                        }                      
+                    }
+                    misDivisores.style.color = "blue";
+                    misDivisores.style.fontWeight = "bold";
+                    misDivisores.textContent = " " + numeroQueSeRevisa.value;
+                    mostrarDivisores.style.color = "black";
+                    mostrarDivisores.textContent = divisor.join(" - ");
+                }
+            } 
+            buscarDivisores.addEventListener("click", divisores);
+
+            const primo = () => {
+                if(numeroQueSeRevisa.value === "" || Number(numeroQueSeRevisa.value) < 2 
+                    || Number(numeroQueSeRevisa.value) !== parseInt(numeroQueSeRevisa.value)) {
+                    soyPrimo.textContent = "";
+                    numeroPrimo.textContent= "";
+                    return "";
+                }    
+                else if (Number(numeroQueSeRevisa.value) === parseInt(numeroQueSeRevisa.value)) {        
+                    for (let i = 2; i <= Math.sqrt(numeroQueSeRevisa.value); i++) {
+                        if (numeroQueSeRevisa.value % i === 0) {
+                            soyPrimo.style.color = "blue";
+                            soyPrimo.style.fontWeight = "bold";
+                            soyPrimo.textContent = " " + numeroQueSeRevisa.value;
+                            numeroPrimo.style.color = "blue";
+                            return numeroPrimo.textContent = "NO ES NÚMERO PRIMO";
+                        }            
+                    }
+                    soyPrimo.style.color = "blue";
+                    soyPrimo.style.fontWeight = "bold";
+                    soyPrimo.textContent = " " + numeroQueSeRevisa.value;
+                    numeroPrimo.style.color = "red";
+                    return numeroPrimo.textContent = "SI ES NÚMERO PRIMO";
+                }
+            } 
+            buscarDivisores.addEventListener("click", primo);
+
+            resetearCampos.addEventListener("click", function () {
+                misDivisores.textContent = "";
+                soyPrimo.textContent = "";
+                numeroQueSeRevisa.value = "";    
+                mostrarDivisores.textContent = "";
+                numeroPrimo.textContent= "";
+            });
+        </script>
+    </body>
+    <a href="#" id="subir">^</a>
+</html>

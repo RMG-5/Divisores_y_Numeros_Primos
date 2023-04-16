@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<!-- ********** ********** ********** ********** ********** ********** ********** -->
+<!-- ********** ********** ********** ********** ********** ********** ********** -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="keywords" content="Divisores, Números Primos, JavaScript, HTML, CSS" />
+        <meta name="description" content="Aplicación WEB para encontrar divisores de 
+            un número y saber si es un número primo" />  
+        <meta name="author" content="Ricardo García - R.M.G." />  
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Divisores y Números Primos</title>
+        <link href="img/logo-r-color.svg" rel="icon" type="image/x-icon" />
+        <link href="css/styles.css" rel="stylesheet" type="text/css" />                
+    </head>
+<!-- ********** ********** ********** ********** ********** ********** ********** -->
+<!-- ********** ********** ********** ********** ********** ********** ********** -->
+    <body>
+        <h1>Divisores y Números Primos</h1>
+
+        <p>¿Sabes que es un divisor?</p>
+
+        <p class="especial">En Matemáticas, un número es <strong>divisor</strong> de 
+            otro cuando lo divide exactamente; por ejemplo: <em><strong>5 es divisor 
+            de 50</strong></em>, porqué <em><strong>50 ÷ 5 = 10</strong></em>. A los 
+            divisores también se les llama <strong>factores.</strong></p>
+
+        <p>¿Conoces cuáles son los números primos?</p>
+
+        <p class="especial">En Matemáticas, un <strong>número primo</strong> es un 
+            número natural mayor que <strong>1</strong> el cual tiene únicamente dos 
+            divisores positivos distintos: él <em><strong>mismo número</strong></em> 
+            y el <em><strong>1.</strong></em></p>
+
+        <hr/>
+        <p>Ahora que ya sabes que son los divisores y cuáles son los números primos. 
+            Escribe un número y te mostrare sus divisores, tambien te dire si es un 
+            número primo.</p>
+
+        <input type="number" min="1" max="10000000" placeholder="Escribe un número"/>
+
+        <p class="centrado">Haz clic en el siguiente botón para ver sus divisores.</p>
+
+        <button id="buscar-divisores">Mostrar divisores</button>
+
+        <p class="centrado">Estos son los divisores de<span id="mis-divisores"></span>:</p>
+
+        <p id="mostrar-divisores" class="contenedor"></p>
+
+        <p class="centrado">Solo para que lo tengas presente, te 
+            comento que<span id="soy-primo"></span>:</p>
+
+        <p id="numero-primo" class="contenedor"></p>
+        
+        <button class="resetear-campos">Resetear Campos</button>
+        
+        <hr/>
+        <p class="derecha">Espero verte pronto ¡hasta luego!</p>
+
+        <div id="logo"></div> 
+        <script src="js/index.js"></script>
+    </body>
+    <a href="#" id="subir">^</a>
+<!-- ********** ********** ********** ********** ********** ********** ********** -->
+<!-- ********** ********** ********** ********** ********** ********** ********** -->
+</html>

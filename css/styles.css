@@ -1,0 +1,178 @@
+/* ********** ********** ********** ********** ********** ********** ********** */
+/* HOJA DE ESTILOS "DIVISORES Y NÚMEROS PRIMOS" */
+/* ********** ********** ********** ********** ********** ********** ********** */
+
+/* INSTRUCCIONES GENERALES. */
+* {
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+    font-family: Tahoma;
+    font-size: 1.8rem;
+    scroll-behavior: smooth;
+}
+
+@font-face{	
+    font-family: 'TitanOne-Regular';
+    src: url('../font/TitanOne-Regular.ttf');
+}
+
+html {     
+    position: relative;  
+    font-size: 62.5%;    
+    background: white;
+}
+
+/* FORMATO PAGINA WEB. */
+body {    
+    max-width: 700px;
+    margin: 0 auto; 
+    padding: 2.5rem;
+    background: rgba(0, 163, 0, 0.1);     
+    box-shadow: 0 0 1rem 1rem rgba(0, 0, 0, 0.2);  
+}
+
+h1 {
+    padding: 0 1rem 1rem;
+    font-family: 'TitanOne-Regular';
+    font-size: 3rem;
+    font-weight: normal;
+    text-align: center;
+}
+
+p {
+    margin: 2rem 0;
+}
+
+.especial {
+    padding-left: 1rem;
+    border-left: 0.8rem solid rgb(0, 163, 0);
+}
+
+.centrado {
+    margin-bottom: 0.7rem;
+    text-align: center;
+}
+
+.derecha {
+    font-weight: bold;
+    text-align: right;
+}
+
+hr {
+    height: 0.2rem;
+    margin: 2rem 0 1rem;
+    background: rgb(0, 163, 0);        
+    border: 0.1rem solid rgb(0, 163, 0);
+}
+
+input[type=number] {
+    outline: none;
+    display: block;
+    width: 100%;
+    margin: 0 auto 2.5rem;
+    padding: 1rem;
+    font-family: serif;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    border: 0.1rem dotted rgb(0, 163, 0);
+    border-radius: 0.5rem;
+}
+
+input[type=number]:focus {
+    border: 0.1rem solid rgb(0, 163, 0);
+}
+
+.contenedor {
+    width: 100%;
+    min-height: 4.5rem;
+    margin: 0 auto 2.5rem;
+    padding: 1rem;
+    font-family: 'serif';
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    background: white;
+    border: 0.1rem solid rgb(0, 163, 0);
+    border-radius: 0.5rem;
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin: 0 auto 1.5rem;
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    background: rgb(0, 163, 0);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background: rgb(0, 100, 0);
+}
+
+button:active {
+    background: rgb(0, 163, 0);
+}
+
+.resetear-campos {
+    background: rgb(255, 0, 0);
+}
+
+.resetear-campos:hover {
+    background: rgb(200, 0, 0);
+}
+
+.resetear-campos:active {
+    background: rgb(255, 0, 0);
+}
+
+/* LOGO <R/>. */
+#logo {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    height: 5rem;
+    width: 5rem;
+    background-image: url("../img/logo-r-mono.svg");
+    background-size: contain;
+    background-position: center;   
+    background-repeat: no-repeat;
+    filter: opacity(50%);
+}
+
+/*  BOTON SUBIR.  */
+#subir {
+    position: fixed;
+    bottom: 1rem;
+    right: 7rem;
+    height: 5rem;
+    width: 5rem;
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: rgba(50, 50, 50, 0.55);
+    background: rgba(150, 150, 150, 0.35);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    z-index: 5;
+}
+
+#subir:hover {
+    color: white;
+    background: hsla(120, 95%, 25%, 1.00);
+}
+
+#subir:active {
+    color: rgba(50, 50, 50, 0.55);
+    background: rgba(150, 150, 150, 0.35);
+}
+
+/* ********** ********** ********** ********** ********** ********** ********** */
+/* ********** ********** ********** ********** ********** ********** ********** */
